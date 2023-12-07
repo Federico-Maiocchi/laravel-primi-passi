@@ -22,4 +22,26 @@ Route::get('/', function () {
     ];
 
     return view('home', $data);
-});
+})->name('home');
+
+Route::get('/Informations', function () {
+
+    $data = [
+        'title' => 'Welcome in page Info',
+        'subtitle' => 'Info'
+
+    ];
+
+    return view('/Info', $data);
+})->name('info');
+
+Route::get('/Contacts', function () {
+
+    $data = [
+        'title' => 'Welcome in page Contact',
+        'subtitle' => 'Contact'
+
+    ];
+
+    return view('/Contact', $data);
+})->name('contacts');
